@@ -7,7 +7,7 @@ const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute
 const register = async (userData) => {
     const response = await axios.post(`${API_URL}/users/register`, userData, {
         headers: {
-            'X-CSRF-TOKEN': csrfToken
+            'X-CSRF-TOKEN': csrfToken,
         }
     });
     

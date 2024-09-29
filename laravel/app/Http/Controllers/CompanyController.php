@@ -57,9 +57,7 @@ class CompanyController extends Controller
         $company->email = $request->email ?? $company->email;
         $company->website = $request->website ?? $company->website;
 
-        // Handle logo upload
         if ($request->hasFile('logo')) {
-            // Delete old logo if exists
             if ($company->logo) {
                 Storage::disk('public')->delete($company->logo);
             }

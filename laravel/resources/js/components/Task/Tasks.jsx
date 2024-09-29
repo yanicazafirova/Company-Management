@@ -90,7 +90,7 @@ const Tasks = () => {
 
     return (
         <div className="tasks-container">
-            <h1>Tasks</h1>
+            <h1 className="text-xl font-bold text-blue-600 mb-4">Tasks</h1>
             <form onSubmit={handleSubmit} className="task-form">
                 <input
                     type="text"
@@ -129,7 +129,7 @@ const Tasks = () => {
                 <button type="submit">{editingId ? 'Update Task' : 'Add Task'}</button>
                 {editingId && <button type="button" onClick={resetForm}>Cancel</button>}
             </form>
-            <h2>Existing Tasks</h2>
+            <h2 className="text-xl font-bold text-blue-600 mb-4">Existing Tasks</h2>
             <table>
                 <thead>
                     <tr>

@@ -137,7 +137,7 @@ const Employees = () => {
                 <button type="submit">{editingId ? 'Update Employee' : 'Add Employee'}</button>
                 {editingId && <button type="button" onClick={resetForm}>Cancel</button>}
             </form>
-            <h2>Existing Employees</h2>
+            <h2 className="text-xl font-bold text-blue-600 mb-4">Existing Employees</h2>
             <table>
                 <thead>
                     <tr>
