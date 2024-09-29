@@ -23,7 +23,7 @@ const Register = () => {
             setConfirmPassword('');
             navigate('/login');
         } catch (error) {
-            alert('Password must be more than 7 symbols!');
+            alert('Something went wrong!');
         }
     };
     

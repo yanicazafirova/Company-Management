@@ -94,7 +94,7 @@ const Employees = () => {
 
     return (
         <div className="employees-container">
-            <h1>Employees</h1>
+            <h1 className="text-xl font-bold text-blue-600 mb-4">Employees</h1>
             <form onSubmit={handleSubmit} className="employee-form">
                 <input
                     type="text"

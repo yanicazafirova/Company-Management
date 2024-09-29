@@ -14,7 +14,6 @@ const Header = () => {
 
     return (
         <header className="bg-blue-600 p-4">
-            <h1 className="text-white text-2xl">Company Management</h1>
             <nav>
                 <ul className="flex space-x-4">
                     <li>

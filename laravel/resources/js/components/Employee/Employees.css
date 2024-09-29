@@ -35,6 +35,13 @@ button {
     margin-bottom: 20px;
 }
 
+.employee-form select {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
 .employee-form input {
     margin-bottom: 10px;
     padding: 8px;
