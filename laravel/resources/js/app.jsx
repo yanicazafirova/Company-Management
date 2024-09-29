@@ -3,6 +3,9 @@ import '../css/app.css';
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Login from './components/Login';
+import Register from './components/Register';
+import { AuthProvider } from './context/AuthContext';
 
 
 const Home = () => {
@@ -15,14 +18,32 @@ const Home = () => {
 
 const router = createBrowserRouter([
     {
+        // path: "/",
+        // element: <Home/>,
         path: "/",
-        element: <Home/>,
+        element: <Register />,
+        children: [
+            {
+                index: true,
+                element: <Home />,
+            },
+            {
+                path: "login",
+                element: <Login />,
+            },
+            {
+                path: "register",
+                element: <Register />,
+            },
+        ],
     },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("app"));
 root.render(
     <React.StrictMode>
-        <RouterProvider router={router} />
+        <AuthProvider>
+            <RouterProvider router={router} />
+        </AuthProvider>
     </React.StrictMode>
 );
