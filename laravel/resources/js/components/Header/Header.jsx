@@ -21,7 +21,7 @@ const Header = () => {
                                 <Link className="text-white hover:underline" to="/companies">Companies</Link>
                             </li>
                             <li>
-                                <Link className="text-white hover:underline" to="/employes">Employes</Link>
+                                <Link className="text-white hover:underline" to="/employees">Employees</Link>
                             </li>
                             <li>
                                 <Link className="text-white hover:underline" to="/tasks">Tasks</Link>

@@ -9,6 +9,9 @@ import { AuthProvider } from './context/AuthContext';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
+import Companies from './components/Company/Companies';
+import Employees from './components/Employee/Employees';
+import Tasks from './components/Task/Tasks';
 
 const AppLayout = () => (
     <div>
@@ -35,6 +38,18 @@ const router = createBrowserRouter([
                 path: "register",
                 element: <Register />,
             },
+            {
+                path: "companies",
+                element: <Companies />
+            },
+            {
+                path: "employees",
+                element: <Employees />
+            },
+            {
+                path: "tasks",
+                element: <Tasks />
+            }
         ],
     },
 ]);
