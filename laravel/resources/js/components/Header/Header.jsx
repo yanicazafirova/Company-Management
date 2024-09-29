@@ -7,6 +7,11 @@ const Header = () => {
     const { user, logout } = useAuth();
     const navigate = useNavigate();
 
+    const handleLogout = async () => {
+        await logout();
+        navigate('/login');
+    };
+
     return (
         <header className="bg-blue-600 p-4">
             <h1 className="text-white text-2xl">Company Management</h1>
@@ -26,7 +31,7 @@ const Header = () => {
                             <li>
                                 <Link className="text-white hover:underline" to="/tasks">Tasks</Link>
                             </li>
-                            <button className="text-white hover:underline" onClick={logout}>Logout</button>
+                            <button className="text-white hover:underline" onClick={handleLogout}>Logout</button>
                         </>
                     ) : (
                         <>

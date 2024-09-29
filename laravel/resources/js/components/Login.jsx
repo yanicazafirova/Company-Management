@@ -18,7 +18,7 @@ const Login = () => {
             localStorage.setItem('user', JSON.stringify(userData)); 
             navigate('/');
         } catch (error) {
-            console.error('Login failed:', error.response.data);
+           alert('Password must be more than 7 symbols!');
         }
     };
 
