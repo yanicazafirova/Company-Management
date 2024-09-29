@@ -21,7 +21,7 @@ const Register = () => {
             await AuthService.register({ name, email, password, password_confirmation: confirmPassword });
             setPassword('');
             setConfirmPassword('');
-            navigate('/login');
+            navigate('/users/login');
         } catch (error) {
             console.error('Registration failed:', error.response.data);
         }
